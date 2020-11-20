@@ -14,7 +14,7 @@ const db = require('./src/db/mongo');
 db();
 const port = process.env.PORT || 5000;
 const corsOptions = {
-    exposedHeaders: 'x-auth ',
+    exposedHeaders: 'x-auth-token',
 };
 
 let httpLoger = rfs.createStream('httpLoger.log', {

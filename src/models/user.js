@@ -5,6 +5,7 @@ const {
     dateRegexValidator: regexValidator,
     usernamePattern,
 } = require('./../helper/regex');
+const Token = require('./tokens');
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -13,6 +14,7 @@ const userSchema = new mongoose.Schema({
         minlength: 3,
         maxlength: 255,
     },
+
     username: {
         type: String,
         required: true,
@@ -109,25 +111,27 @@ userSchema.pre('save', function (next) {
 //     });
 // };
 
-// userSchema.methods.genAuthToken = function () {
-//     let user = this;
-//     let token = jwt
-//         .sign(
-//             { _id: user._id.toHexString(), access: user.adminLevel },
-//             process.env.JWT_CONF
-//         )
-//         .toString();
+userSchema.methods.genAuthToken = function () {
+    let user = this;
+    let token = jwt
+        .sign(
+            { _id: user._id.toHexString(), access: user.adminLevel },
+            process.env.JWT_CONF
+        )
+        .toString();
 
-//     const newToken = new Token({ user: user._id, token });
-//     newToken.save();
-//     return token;
-// };
+    const newToken = new Token({ user: user._id, token });
+    newToken.save((err) => {
+        if (err) return null;
+    });
+    return token;
+};
 
-// userSchema.virtual('user', {
-//     ref: 'Token',
-//     localField: '_id',
-//     foreignField: 'user',
-// });
+userSchema.virtual('user', {
+    ref: 'Token',
+    localField: '_id',
+    foreignField: 'user',
+});
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;
