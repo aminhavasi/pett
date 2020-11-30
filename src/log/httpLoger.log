@@ -127,3 +127,7 @@
 ::ffff:127.0.0.1 - - [20/Nov/2020:18:03:11 +0000] "POST /api/auth/register HTTP/1.1" 404 47 "http://localhost:3000/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
 ::ffff:127.0.0.1 - - [20/Nov/2020:18:04:00 +0000] "POST /api/auth/register HTTP/1.1" 201 22 "http://localhost:3000/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
 ::ffff:127.0.0.1 - - [20/Nov/2020:18:06:14 +0000] "POST /api/auth/register HTTP/1.1" 201 22 "http://localhost:3000/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
+::ffff:127.0.0.1 - - [29/Nov/2020:07:06:41 +0000] "POST /api/auth/register HTTP/1.1" 201 22 "http://localhost:3000/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
+::ffff:127.0.0.1 - - [29/Nov/2020:07:37:11 +0000] "POST /api/auth/register HTTP/1.1" 404 47 "http://localhost:3000/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
+::ffff:127.0.0.1 - - [29/Nov/2020:07:47:46 +0000] "POST /api/auth/register HTTP/1.1" 201 22 "http://localhost:3000/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
+::ffff:127.0.0.1 - - [29/Nov/2020:08:02:11 +0000] "POST /api/auth/register HTTP/1.1" 201 22 "http://localhost:3000/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
